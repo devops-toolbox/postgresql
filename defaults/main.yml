@@ -1,0 +1,19 @@
+---
+# defaults file for postgresql
+
+postgresql_packages_state: present
+postgresql_remove_packages: true
+postgresql_enable_service: true
+postgresql_enable_selinux: true
+postgresql_copy_templates: true
+postgresql_firewall_configure: true
+postgresql_firewall_rules:
+  - service: ssh
+  - port: 3389
+postgresql_users:
+  - user: devops
+    group: docker
+postgresql_selinux_booleans:
+  - name: ftp_home_dir
+    state: true
+    persistent: true

@@ -1,0 +1,17 @@
+---
+# Users and groups configuration for postgresql
+
+- name: defined groups are created
+  group:
+    name: "{{ item.group }}"
+    state: present
+  loop: "{{ postgresql_users }}"
+  become: true
+
+- name: users added to secondary groups
+  user:
+    name: "{{ item.user }}"
+    append: true
+    groups: "{{ item.group }}"
+  become: true
+  loop: "{{ postgresql_users }}"
