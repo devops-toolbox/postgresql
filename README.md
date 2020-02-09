@@ -8,10 +8,10 @@ postgresql: Postgresql
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.postgresql](https://galaxy.ansible.com/devops-toolbox.postgresql)
+[https://galaxy.ansible.com/devopstoolbox.postgresql](https://galaxy.ansible.com/devopstoolbox.postgresql)
 
 ```bash
-ansible-galaxy install devops-toolbox.postgresql
+ansible-galaxy install devopstoolbox.postgresql
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: postgresql is configured
       import_role:
-        name: devops-toolbox.postgresql
+        name: devopstoolbox.postgresql
       vars:
         postgresql_packages_state: present
         postgresql_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
